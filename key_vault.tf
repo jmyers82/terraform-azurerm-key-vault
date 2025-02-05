@@ -5,7 +5,7 @@ resource "random_pet" "single" {
 
 resource "azurerm_resource_group" "hashitalks_kv_rg" {
   name     = "rg-hashitalks-${random_pet.single.id}"
-  location = "Central US"
+  location = var.region
 }
 
 resource "azurerm_key_vault" "hashitalks_kv" {
