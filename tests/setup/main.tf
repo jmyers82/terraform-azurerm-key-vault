@@ -44,7 +44,7 @@ output "rg_name" {
 }
 
 ## Output the random pet name
-output "kv_pet_name" {
+output "kv_pet_name_1" {
   value = random_pet.pet_name.id
 }
 
