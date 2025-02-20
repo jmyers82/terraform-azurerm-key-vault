@@ -12,7 +12,7 @@ run "create_kv" {
   command = plan
   variables {
     region = "eastus"
-    kv_name = "kv-hashitalks-${run.setup_rg.kv_pet_name}"
+    kv_name = "kv-hashitalks-${run.setup_rg.kv_pet_name_1}"
   }
 
 
