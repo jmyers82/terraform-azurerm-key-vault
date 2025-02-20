@@ -5,10 +5,7 @@ run "setup_rg" {
 }
 
 run "create_kv_v1_0_0" {
-  module {
-    source  = "app.terraform.io/hashiconf24/key-vault/azurerm"
-    version = "1.0.0"
-  }
+
   command = apply
   variables {
     region = "eastus"
@@ -17,10 +14,7 @@ run "create_kv_v1_0_0" {
 }
 
 run "create_kv_v2_0_0" {
-  module {
-    source  = "app.terraform.io/hashiconf24/key-vault/azurerm"
-    version = "2.0.0"
-  }
+
   command = apply
   
   variables {
