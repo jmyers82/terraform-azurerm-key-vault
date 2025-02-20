@@ -51,7 +51,7 @@ output "kv_pet_name_1" {
 
 ## Output the random pet name
 output "kv_pet_name_2" {
-  value = random_pet.pet_name.id
+  value = random_pet.pet_name_2.id
 }
 
 
