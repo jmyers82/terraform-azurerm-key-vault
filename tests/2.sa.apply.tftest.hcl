@@ -12,7 +12,7 @@ run "create_kv_v1_0_0" {
   command = apply
   variables {
     region = "eastus"
-    kv_name = "hashitalks-kv-${random_string.setup_rg.kv_pet_name_2}"
+    kv_name = "hashitalks-kv-${run.setup_rg.kv_pet_name_1}"
   }
 }
 
@@ -25,6 +25,6 @@ run "create_kv_v2_0_0" {
   
   variables {
     region = "centralus"
-    kv_name = "hashitalks-kv-${random_string.setup_rg.kv_pet_name_2}"
+    kv_name = "hashitalks-kv-${run.setup_rg.kv_pet_name_2}"
   }
 }
