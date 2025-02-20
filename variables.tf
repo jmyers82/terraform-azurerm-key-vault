@@ -8,7 +8,6 @@ variable "subscription_id" {
 variable "region" {
   description = "The Azure region to use for the tests"
   type        = string
-  default     = "centralus"
   validation {
     condition     = contains(["eastus", "westus", "centralus"], var.region)
     error_message = "Specify a valid Azure region."
