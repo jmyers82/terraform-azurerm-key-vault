@@ -15,3 +15,9 @@ variable "region" {
   }
   
 }
+
+variable "kv_name" {
+  description = "The name of the key vault to create"
+  type        = string
+  default     = "kv-hashitalks"
+}

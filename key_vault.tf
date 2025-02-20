@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "hashitalks_kv_rg" {
 }
 
 resource "azurerm_key_vault" "hashitalks_kv" {
-  name                        = "kv-hashitalks-${random_pet.single.id}"
+  name                        = var.kv_name
   location                    = azurerm_resource_group.hashitalks_kv_rg.location
   resource_group_name         = azurerm_resource_group.hashitalks_kv_rg.name
   tenant_id                   = data.azurerm_client_config.current_config.tenant_id

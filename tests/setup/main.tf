@@ -27,6 +27,10 @@ resource "random_pet" "pet_name" {
   length = 1
 }
 
+resource "random_pet" "pet_name_2" {
+  length = 1
+}
+
 # Create a resource group
 resource "azurerm_resource_group" "temp_rg" {
   name     = "hashitalk-basic-sa-${random_pet.pet_name.id}-rg"
@@ -40,7 +44,13 @@ output "rg_name" {
 }
 
 ## Output the random pet name
-output "sa_pet_name" {
+output "kv_pet_name" {
+  value = random_pet.pet_name.id
+}
+
+
+## Output the random pet name
+output "kv_pet_name_2" {
   value = random_pet.pet_name.id
 }
 
